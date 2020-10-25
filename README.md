@@ -1,23 +1,17 @@
 ### Hello and Welcome to my GitHub 👋
 
+## [![Nikolas Header](/Users/nikolaskorakidis/Code/NikolasKorakidis/images/myGif.gif)](https://nikolaskorakidis.com)
+
 ### <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="50"> A little more about me...
 
 ```javascript
 const Nikolas = {
   origin: "Greece",
   code: [Javascript, Typescript, HTML, CSS],
-  tools: [
-    React,
-    Redux,
-    Node,
-    GraphQL,
-    Styled - Components,
-    Jest,
-    Material - UI,
-  ],
+  tools: [React, Redux, Node, GraphQL, Styled_Components, Jest, Material_UI],
   education: {
-    nurse: "Degree with specialization in Post Surgury orthopedic Nursing",
-    publicRelations: "Certificated in public Relations by Hellenic Government",
+    nursing: "Degree with specialization in Post Surgury orthopedic Nursing",
+    publicRelations: "Certificated in Public Relations by Hellenic Government",
     english: "Proficiency in English language by Univercity of Michigan",
   },
   hobbies: [
@@ -48,21 +42,17 @@ const Nikolas = {
 
 ## My GitHub Stats
 
-<a href="https://github.com/NikolasKorakidis/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api?username=NikolasKorakidis&show_icons=true&include_all_commits=true&theme=radical" alt="Nikolas's github stats" />
 </a>
-<a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NikolasKorakidis&layout=compact&theme=radical" />
 </a>
 
 ## My HorecApp Project
 
-<a href="https://github.com/anuraghazra/github-readme-stats">
-  <!-- Change the `github-readme-stats.anuraghazra1.vercel.app` to `github-readme-stats.vercel.app`  -->
+<a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-FrontEnd&theme=radical" />
 </a>    
-<a href="https://github.com/anuraghazra/anuraghazra.github.io">
-  <!-- Change the `github-readme-stats.vercel.app` to `github-readme-stats.vercel.app`  -->
+<a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd">
   <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-BackEnd&theme=radical" />
 </a>
 
