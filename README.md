@@ -4,8 +4,8 @@
 
 ### Hello and Welcome to my GitHub 👋
 
-Hi, I'm [Nikolas Korakidis](nikolaskorakidis.com), a Full Stack Developer 🚀 based in Amsterdam!
-I love creating Applications and Websites and in my free time i love creating music and videos! I love creating in general!!!
+My name is [Nikolas Korakidis](nikolaskorakidis.com), and i am a Full Stack Developer 🚀 based in Amsterdam!
+I love creating Applications and Websites and on my free time i love creating music and videos! I love creating in general!!!
 
 **What am i doing these days...:**
 
