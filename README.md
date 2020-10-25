@@ -1,6 +1,6 @@
 ### Hello and Welcome to my GitHub 👋
 
-## [![Nikolas Header](/Users/nikolaskorakidis/Code/NikolasKorakidis/images/myGif.gif)](https://nikolaskorakidis.com)
+[![Social banner for NIkolas](https://github.com/NikolasKorakidis/NikolasKorakidis/blob/main/images/myGif.gif)](nikolaskorakidis.com)
 
 ### <img src="https://media.giphy.com/media/ZVik7pBtu9dNS/giphy.gif" width="50"> A little more about me...
 
