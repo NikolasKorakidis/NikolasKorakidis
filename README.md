@@ -84,6 +84,6 @@ const Nikolas = {
 
 - I stream coding Sessions and Video Games often at my <a href="https://www.twitch.tv/the_sleepinggiant">Twitch</a> page!
 
-- Sharing updates on <a href="https://www.linkedin.com/in/nikolas-korakidis-380b791aa/">LinkedIn</a> 💼
+- Sharing updates on <a href="https://www.linkedin.com/in/nikolaskorakidis/">LinkedIn</a> 💼
 
 ## <img align="left" width="200" height="100" src="https://media.giphy.com/media/9SN6sjZZ3XzB6/giphy.gif"></a>
