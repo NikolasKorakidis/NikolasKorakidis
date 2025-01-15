@@ -9,10 +9,8 @@ My name is [Nikolas Korakidis](nikolaskorakidis.com), and i am a Javascript Deve
 **What am i doing these days...:**
 
 - 👨🏽‍💻 I’m currently working on a full stack application called, HorecApp. A free to use PoS for restaurants and bars!
-- 🌱 I’m currently learning GraphQL and React Native.
 - 💬 Ask me about anything, I am happy to chat with people.
 - 📫 How to reach me: [korakidisn@gmail.com]();
-- 📝 That is my : [Resume]([resume](https://www.linkedin.com/in/nikolaskorakidis/))
 
 ---
 
