@@ -4,8 +4,7 @@
 
 ### Hello and Welcome to my GitHub 👋
 
-My name is [Nikolas Korakidis](nikolaskorakidis.com), and i am a Full Stack Developer 🚀 based in Amsterdam!
-I love creating Applications and Websites and on my free time i love creating music and videos! I love creating in general!!!
+My name is [Nikolas Korakidis](nikolaskorakidis.com), and i am a Javascript Developer, CRO Enthusiast and a Team Captain in Small Giants!
 
 **What am i doing these days...:**
 
@@ -13,7 +12,7 @@ I love creating Applications and Websites and on my free time i love creating mu
 - 🌱 I’m currently learning GraphQL and React Native.
 - 💬 Ask me about anything, I am happy to chat with people.
 - 📫 How to reach me: [korakidisn@gmail.com]();
-- 📝 That is my : [Resume](resume)
+- 📝 That is my : [Resume]([resume](https://www.linkedin.com/in/nikolaskorakidis/))
 
 ---
 
