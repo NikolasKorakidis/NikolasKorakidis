@@ -2,85 +2,85 @@
 
 ---
 
-### Hello and Welcome to my GitHub 👋
-
-My name is [Nikolas Korakidis](nikolaskorakidis.com), and i am a Javascript Developer, CRO Enthusiast and a Team Captain in Small Giants!
-
-**What am i doing these days...:**
-
-- 👨🏽‍💻 I’m currently working on a full stack application called, HorecApp. A free to use PoS for restaurants and bars!
-- 💬 Ask me about anything, I am happy to chat with people.
-- 📫 How to reach me: [korakidisn@gmail.com]();
+<h1 align="center">Hello, World! 🌍 I'm Nikolas Korakidis 👋</h1>
+<p align="center">
+  <a href="https://nikolaskorakidis.com"><b>🌐 My Website</b></a> |
+  <a href="https://www.linkedin.com/in/nikolaskorakidis"><b>💼 LinkedIn</b></a> |
+  <a href="mailto:korakidisn@gmail.com"><b>📧 Email Me</b></a>
+</p>
 
 ---
 
-**Languages and Tools:**
+## 🚀 About Me 
 
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/javascript/javascript.png"></code>
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/typescript/typescript.png"></code>
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/react/react.png"></code>
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/5c058a388828bb5fde0bcafd4bc867b5bb3f26f3/topics/graphql/graphql.png"></code>
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/nodejs/nodejs.png"></code>
-<code><img height="20" src="https://raw.githubusercontent.com/github/explore/80688e429a7d4ef2fca1e82350fe8e3517d3494d/topics/git/git.png"></code>
+👨‍💻 Full-Stack Developer | 🚀 JavaScript Wizard | 📊 CRO Expert | 🏆 Team Captain @ Small Giants  
 
----
-
-## My GitHub Stats
-
-  <img align="center" src="https://github-readme-stats.vercel.app/api?username=NikolasKorakidis&show_icons=true&include_all_commits=true&theme=radical" alt="Nikolas's github stats" />
-</a>
-  <img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=NikolasKorakidis&layout=compact&theme=radical" />
-</a>
+🔭 Currently building **HorecApp** – A free, open-source PoS system for restaurants & bars!  
+📈 Passionate about **Conversion Rate Optimization**, **A/B Testing**, and **Web Performance**.  
+💡 Love working with **JavaScript, TypeScript, React, Node.js, GraphQL**, and modern web tech.  
 
 ---
 
-## My HorecApp Project
+## 🛠 Tech Stack & Tools  
 
-<a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-FrontEnd&theme=radical" />
-</a>    
-<a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd">
-  <img align="center" src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-BackEnd&theme=radical" />
-</a>
+<p align="center">
+  <img src="https://skillicons.dev/icons?i=js,ts,react,next,nodejs,graphql,express,mongodb,postgres,redux,docker,aws,tailwind,figma,git,github,linux,prisma,vercel,vscode" />
+</p>
+
+🖥️ **Languages**: JavaScript, TypeScript, HTML, CSS, GraphQL, SQL  
+⚡ **Frontend**: React.js, Next.js, TailwindCSS, Styled Components  
+🛠 **Backend**: Node.js, Express, NestJS, GraphQL, Prisma ORM  
+📊 **Analytics & CRO**: Google Analytics, GTM, Hotjar, Optimizely, VWO, Mixpanel  
+☁️ **DevOps & Cloud**: AWS, Docker, Vercel, Firebase  
 
 ---
 
-### A little more about me...
+## 📊 GitHub Stats  
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=NikolasKorakidis&show_icons=true&theme=radical" alt="GitHub Stats" width="48%" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=NikolasKorakidis&theme=radical" alt="GitHub Streak" width="48%" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NikolasKorakidis&layout=compact&theme=radical" alt="Top Languages" />
+</div>
+
+---
+
+## 📌 Featured Projects  
+
+### 🚀 HorecApp - Free PoS for Restaurants & Bars  
+
+<p align="center">
+  <a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-FrontEnd&theme=radical" />
+  </a>
+  <a href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-BackEnd">
+    <img src="https://github-readme-stats.vercel.app/api/pin/?username=NikolasKorakidis&repo=HorecApp-Restaurant-Manager-BackEnd&theme=radical" />
+  </a>
+</p>
+
+💡 **Features**: Table Management | QR Code Menus | Multi-Device Sync | Real-time Order Processing  
+
+---
+
+## 🧩 Fun Facts & Challenges  
 
 ```javascript
 const Nikolas = {
-  origin: "Greece",
-  code: [Javascript, Typescript, HTML, CSS],
-  tools: [React, Redux, Node, GraphQL, Styled_Components, Jest, Material_UI],
-  education: {
-    nursing: "Degree with specialization in Post Surgury orthopedic Nursing",
-    publicRelations: "Certificated in Public Relations by Hellenic Government",
-    english: "Proficiency in English language by Univercity of Michigan",
-  },
+  origin: "Greece 🇬🇷",
+  stack: ["JavaScript", "TypeScript", "React", "Node.js", "GraphQL"],
+  passions: ["CRO", "A/B Testing", "Web Performance", "UX/UI"],
   hobbies: [
-    "video-games",
-    "music-production",
-    "video-production",
-    "motorcycle-tours",
-    "cinema",
-    "mixed-martial-arts",
-    "cocktail-shaking",
+    "🎸 Music Production",
+    "🎥 Video Editing",
+    "🏍️ Motorcycle Rides",
+    "🎮 Gaming",
+    "🥋 MMA"
   ],
   challenges: {
-    hundredDaysOfCode:
-      "I am doing the #100DaysOfCode challenge focused on react and typescript",
-    sixMonthsGym:
-      "I am doing the #sixMonthsGym challenge focues on working out at least four times per week for six months",
-  },
+    "#100DaysOfCode": "Improving React & TypeScript skills",
+    "#6MonthsGym": "Training 4x per week for 6 months straight"
+  }
 };
-```
-
----
-
-## In case you want to go Social 🌎 !
-
-- I stream coding Sessions and Video Games often at my <a href="https://www.twitch.tv/the_sleepinggiant">Twitch</a> page!
-
-- Sharing updates on <a href="https://www.linkedin.com/in/nikolaskorakidis/">LinkedIn</a> 💼
-
-## <img align="left" width="200" height="100" src="https://media.giphy.com/media/9SN6sjZZ3XzB6/giphy.gif"></a>
