@@ -68,7 +68,7 @@
 ## 🧩 Fun Facts & Challenges  
 
 ```javascript
-const Nikolas = {
+const nikolas = {
   origin: "Greece 🇬🇷",
   stack: ["JavaScript", "TypeScript", "React", "Node.js", "GraphQL"],
   passions: ["CRO", "A/B Testing", "Web Performance", "UX/UI"],
