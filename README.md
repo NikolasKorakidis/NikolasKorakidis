@@ -5,7 +5,7 @@
 <p align="center">
   <a href="https://steventheseagull.com"><img src="https://img.shields.io/badge/▶_Play_Steven_the_Seagull-FFC83C?style=for-the-badge&labelColor=14110A" alt="Play Steven the Seagull"/></a>
   <a href="https://nikolaskorakidis.com"><img src="https://img.shields.io/badge/Website-0B0D12?style=for-the-badge&logo=googlechrome&logoColor=white" alt="Website"/></a>
-  <a href="https://youtube.com/@YOUR_CHANNEL"><img src="https://img.shields.io/badge/YouTube-0B0D12?style=for-the-badge&logo=youtube&logoColor=FF0000" alt="YouTube"/></a>
+  <a href="https://www.youtube.com/@sleepinggianttv"><img src="https://img.shields.io/badge/YouTube-0B0D12?style=for-the-badge&logo=youtube&logoColor=FF0000" alt="YouTube"/></a>
   <a href="https://www.linkedin.com/in/nikolaskorakidis"><img src="https://img.shields.io/badge/LinkedIn-0B0D12?style=for-the-badge&logo=linkedin&logoColor=0A66C2" alt="LinkedIn"/></a>
   <a href="mailto:korakidisn@gmail.com"><img src="https://img.shields.io/badge/Email-0B0D12?style=for-the-badge&logo=gmail&logoColor=EA4335" alt="Email"/></a>
 </p>
@@ -126,7 +126,7 @@
 <!-- YOUTUBE:START -->
 <!-- YOUTUBE:END -->
 
-<p align="center">Recorded in OBS, cut in DaVinci Resolve. <a href="https://youtube.com/@YOUR_CHANNEL"><b>Watch on YouTube →</b></a></p>
+<p align="center">Recorded in OBS, cut in DaVinci Resolve. <a href="https://www.youtube.com/@sleepinggianttv"><b>Watch SleepingGiantTV on YouTube →</b></a></p>
 
 <br/>
 
