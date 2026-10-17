@@ -122,7 +122,7 @@
 |:---:|:---:|:---:|:---:|
 | Flights, aircraft, setups | VR tests and impressions | FPV flying and footage | Whatever's worth playing |
 
-<!-- Latest videos, auto-updated by a GitHub Action once the channel link is set -->
+<!-- Latest videos: filled in every 6 hours by .github/workflows/latest-videos.yml -->
 <!-- YOUTUBE:START -->
 <!-- YOUTUBE:END -->
 
