@@ -1,4 +1,6 @@
-<a href="https://nikolaskorakidis.com"><img src="images/hero.svg" width="100%" alt="Nikolas Korakidis: game developer, full-stack builder, CRO specialist, content creator"/></a>
+<a href="https://nikolaskorakidis.github.io/NikolasKorakidis/"><img src="images/showreel.webp" width="100%" alt="Showreel: Steven the Seagull, Echoes of Kharon, Argonisos, Smuggler, apps and the channel"/></a>
+
+<p align="center"><a href="https://nikolaskorakidis.github.io/NikolasKorakidis/"><img src="https://img.shields.io/badge/▶_Open_the_interactive_showreel-F5F3EE?style=for-the-badge&labelColor=07080B" alt="Open the interactive showreel"/></a></p>
 
 <p align="center">
   <a href="https://steventheseagull.com"><img src="https://img.shields.io/badge/▶_Play_Steven_the_Seagull-FFC83C?style=for-the-badge&labelColor=14110A" alt="Play Steven the Seagull"/></a>

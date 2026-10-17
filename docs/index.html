@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta charset="utf-8">
+<title>Nikolas Korakidis</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Games, apps and videos by Nikolas Korakidis: Steven the Seagull, Echoes of Kharon, Argonisos, Smuggler, Gruppetto.">
+<style>
+/* Layout: full-bleed showreel player, then a tilt-card grid of games, apps strip, channel, contact. One deliberate dark look. */
+@font-face { font-family: Anton; src: url(media/anton.ttf); }
+@font-face { font-family: Barlow; font-weight: 700; src: url(media/barlow700.ttf); }
+@font-face { font-family: Barlow; font-weight: 500; src: url(media/barlow500.ttf); }
+:root {
+  --bg: #07080b; --panel: #0e1016; --line: #1c2030; --fg: #f5f3ee; --muted: #8d95a6; --gold: #ffc83c;
+  --display: Anton, Impact, "Arial Narrow", sans-serif; --body: Barlow, "Helvetica Neue", Arial, sans-serif;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html { background: var(--bg); }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-weight: 500; font-size: 17px; line-height: 1.5; overflow-x: hidden; }
+a { color: inherit; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+#spot { position: fixed; inset: 0; pointer-events: none; z-index: 0; background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 30%), rgba(255, 200, 60, .07), transparent 60%); }
+main { position: relative; z-index: 1; }
+
+/* top bar */
+.top { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-block: 18px; font-weight: 700; letter-spacing: .3em; font-size: 12px; text-transform: uppercase; }
+.top nav { display: flex; gap: 20px; flex-wrap: wrap; }
+.top nav a { text-decoration: none; color: var(--muted); }
+.top nav a:hover, .top nav a:focus-visible { color: var(--fg); }
+
+/* player */
+.player { position: relative; aspect-ratio: 16 / 9; max-width: 100%; border-radius: 14px; overflow: hidden; background: #000; border: 1px solid var(--line); box-shadow: 0 40px 120px rgba(0, 0, 0, .6); }
+.player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.chapters { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; align-items: center; }
+.chapters button { font: 700 12px/1 var(--body); letter-spacing: .22em; text-transform: uppercase; color: var(--muted); background: var(--panel); border: 1px solid var(--line); border-radius: 30px; padding: 10px 14px; cursor: pointer; transition: color .2s, border-color .2s, background .2s; }
+.chapters button:hover, .chapters button:focus-visible { color: var(--fg); border-color: #3a4156; outline: none; }
+.chapters button[aria-current="true"] { color: #14110a; background: var(--c, var(--gold)); border-color: var(--c, var(--gold)); }
+.chapters .pp { margin-left: auto; color: var(--fg); }
+
+/* section heads */
+.head { display: flex; align-items: end; justify-content: space-between; gap: 16px; flex-wrap: wrap; margin: 96px 0 26px; border-bottom: 1px solid var(--line); padding-bottom: 16px; }
+.head small { display: block; color: var(--c); font-weight: 700; letter-spacing: .32em; font-size: 12px; }
+.head h2 { font: 400 clamp(44px, 7vw, 84px)/1 var(--display); letter-spacing: .02em; margin: 6px 0 0; text-wrap: balance; }
+.head p { color: var(--muted); max-width: 44ch; margin: 0; }
+
+/* featured */
+.feat { display: grid; grid-template-columns: 1.35fr 1fr; gap: 28px; align-items: center; }
+.feat > * { min-width: 0; }
+.feat video { width: 100%; border-radius: 14px; border: 6px solid #111; box-shadow: 14px 14px 0 var(--gold); display: block; }
+.feat h3 { font: 400 clamp(48px, 6vw, 76px)/.95 var(--display); margin: 0 0 14px; color: var(--gold); }
+.feat ul { padding: 0; margin: 18px 0 24px; list-style: none; display: grid; gap: 8px; }
+.feat li::before { content: "▸ "; color: var(--gold); }
+.cta { display: inline-flex; align-items: center; gap: 12px; text-decoration: none; background: var(--gold); color: #14110a; font-weight: 700; letter-spacing: .2em; font-size: 14px; padding: 16px 24px; border-radius: 40px; transition: transform .2s, box-shadow .2s; }
+.cta:hover, .cta:focus-visible { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255, 200, 60, .35); outline: none; }
+.cta.ghost { background: transparent; color: var(--fg); border: 1px solid #3a4156; }
+
+/* tilt cards */
+.grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; perspective: 1200px; }
+.card { position: relative; display: block; text-decoration: none; border-radius: 14px; overflow: hidden; background: var(--panel); border: 1px solid var(--line); transform-style: preserve-3d; transition: transform .15s ease-out, border-color .3s; min-width: 0; }
+.card:hover, .card:focus-visible { border-color: var(--c); outline: none; }
+.card .media { position: relative; aspect-ratio: 16 / 10; overflow: hidden; }
+.card .media img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; transition: opacity .4s, transform .6s; }
+.card .media .anim { opacity: 0; }
+.card:hover .media .anim, .card:focus-visible .media .anim { opacity: 1; }
+.card:hover .media img, .card:focus-visible .media img { transform: scale(1.04); }
+.card .glare { position: absolute; inset: 0; pointer-events: none; background: radial-gradient(400px circle at var(--gx, 50%) var(--gy, 0%), rgba(255, 255, 255, .14), transparent 50%); opacity: 0; transition: opacity .3s; }
+.card:hover .glare { opacity: 1; }
+.card .body { padding: 18px 20px 22px; transform: translateZ(30px); }
+.card small { color: var(--c); font-weight: 700; letter-spacing: .26em; font-size: 11px; text-transform: uppercase; }
+.card h3 { font: 400 34px/1 var(--display); margin: 8px 0 8px; letter-spacing: .02em; }
+.card p { margin: 0; color: var(--muted); font-size: 15px; }
+.card .go { position: absolute; right: 16px; top: 16px; background: rgba(0, 0, 0, .6); border: 1px solid rgba(255, 255, 255, .2); color: var(--fg); font-weight: 700; font-size: 11px; letter-spacing: .2em; padding: 7px 10px; border-radius: 20px; backdrop-filter: blur(6px); }
+
+/* apps */
+.apps { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.app { border-radius: 14px; overflow: hidden; border: 1px solid var(--line); text-decoration: none; display: block; transition: transform .3s, border-color .3s; min-width: 0; }
+.app:hover, .app:focus-visible { transform: translateY(-4px); border-color: var(--c); outline: none; }
+.app img { width: 100%; display: block; }
+.tools { margin-top: 20px; display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; }
+.tool { padding: 16px; border: 1px solid var(--line); border-radius: 12px; background: var(--panel); text-decoration: none; transition: border-color .3s; min-width: 0; }
+.tool:hover, .tool:focus-visible { border-color: #c8f03c; outline: none; }
+.tool b { display: block; font-size: 16px; letter-spacing: .04em; }
+.tool span { color: var(--muted); font-size: 14px; }
+
+/* channel */
+.ticker { overflow: hidden; border-block: 1px solid var(--line); padding-block: 18px; }
+.ticker div { display: flex; gap: 48px; width: max-content; animation: tick 22s linear infinite; font: 400 64px/1 var(--display); color: transparent; -webkit-text-stroke: 1.5px #e3262b; }
+.ticker span:nth-child(even) { color: #e3262b; -webkit-text-stroke: 0; }
+@keyframes tick { to { transform: translateX(-50%); } }
+
+/* contact */
+.end { text-align: center; padding-block: 110px 80px; }
+.end h2 { font: 400 clamp(64px, 12vw, 160px)/.9 var(--display); margin: 0; }
+.end h2 span { color: var(--gold); }
+.end p { color: var(--muted); }
+.end .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 26px; }
+.mail { user-select: all; font-weight: 700; letter-spacing: .08em; }
+footer { color: #4a5163; font-size: 12px; letter-spacing: .25em; text-align: center; padding-block: 0 40px; text-transform: uppercase; }
+
+@media (max-width: 900px) { .feat, .apps { grid-template-columns: 1fr; } .grid { grid-template-columns: 1fr 1fr; } .tools { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 560px) { .grid { grid-template-columns: 1fr; } .top nav { display: none; } .chapters .pp { margin-left: 0; } }
+@media (prefers-reduced-motion: reduce) { .ticker div { animation: none; } .card { transition: none; } }
+</style>
+
+<div id="spot"></div>
+<main>
+  <div class="wrap">
+    <header class="top"><span>Nikolas Korakidis</span>
+      <nav><a href="#featured">Featured</a><a href="#games">Games</a><a href="#apps">Apps</a><a href="#channel">Channel</a><a href="#contact">Contact</a></nav>
+    </header>
+
+    <div class="player"><iframe id="reel" src="reel.html" title="Showreel" allow="autoplay"></iframe></div>
+    <div class="chapters" id="chapters">
+      <button data-k="intro" style="--c:#f5f3ee">Intro</button>
+      <button data-k="steven" style="--c:#ffc83c">Steven</button>
+      <button data-k="kharon" style="--c:#5ac8ff">Kharon</button>
+      <button data-k="argo" style="--c:#e8c46e">Argonisos</button>
+      <button data-k="smug" style="--c:#ff8a3c">Smuggler</button>
+      <button data-k="apps" style="--c:#c8f03c">Apps</button>
+      <button data-k="creator" style="--c:#ff5a5f">Channel</button>
+      <button class="pp" id="pp">❚❚ Pause</button>
+    </div>
+
+    <section id="featured">
+      <div class="head" style="--c:#ffc83c"><div><small>01 / Featured</small><h2>Play it now</h2></div><p>A 3D arcade flyer that runs in your browser. No install, no account.</p></div>
+      <div class="feat">
+        <video src="media/st-kraken.webm" autoplay muted loop playsinline poster="media/steven-og.jpg"></video>
+        <div>
+          <h3>Steven the Seagull</h3>
+          <p>Steven survived CorpoChem's BioLiquid-7 spill. Now he's coming for the Sky Barons, one dive-bomb at a time.</p>
+          <ul><li>9 chapters, from the beach to the Sky Barons' airship</li><li>Boss fights: the cruise ship, the Kraken</li><li>Arcade, speedrun and ranked modes</li><li>three.js + Vite, every level tested by a bot</li></ul>
+          <a class="cta" href="https://steventheseagull.com" target="_blank" rel="noopener">▶ Play free</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="games">
+      <div class="head" style="--c:#5ac8ff"><div><small>02 / Games</small><h2>Worlds in progress</h2></div><p>Hover a card to see it move. Click to open the code.</p></div>
+      <div class="grid">
+        <a class="card" style="--c:#5ac8ff" href="https://github.com/NikolasKorakidis/Mecha-Techa-Soldier" target="_blank" rel="noopener">
+          <div class="media"><img src="media/08_boss2.jpg" alt="Echoes of Kharon boss fight"><img class="anim" src="media/motion-kharon.webp" alt="" loading="lazy"><span class="go">CODE ↗</span></div>
+          <div class="body"><small>Godot 4 · in development</small><h3>Echoes of Kharon</h3><p>A 2.5D shooter that becomes a mech platformer mid-run.</p></div><div class="glare"></div></a>
+        <a class="card" style="--c:#e8c46e" href="https://github.com/NikolasKorakidis/argonisos" target="_blank" rel="noopener">
+          <div class="media"><img src="media/temple.jpg" alt="Argonisos temple"><img class="anim" src="media/motion-argonisos.webp" alt="" loading="lazy"><span class="go">CODE ↗</span></div>
+          <div class="body"><small>three.js · open-world survival</small><h3>Argonisos</h3><p>Craft, build and hunt your way through the Trial of Zeus.</p></div><div class="glare"></div></a>
+        <a class="card" style="--c:#ff8a3c" href="https://github.com/NikolasKorakidis/smuggler" target="_blank" rel="noopener">
+          <div class="media"><img src="media/formation-sunset.jpg" alt="Smuggler formation at sunset"><img class="anim" src="media/motion-smuggler.webp" alt="" loading="lazy"><span class="go">CODE ↗</span></div>
+          <div class="body"><small>Godot 4 + JSBSim · flight</small><h3>Smuggler</h3><p>1983. Fly low, stay quiet, get paid. Real physics, no HUD.</p></div><div class="glare"></div></a>
+      </div>
+    </section>
+
+    <section id="apps">
+      <div class="head" style="--c:#c8f03c"><div><small>03 / Apps</small><h2>Things people use</h2></div><p>Mobile and web apps, plus the CRO tools I build for my day job.</p></div>
+      <div class="apps">
+        <a class="app" style="--c:#c8f03c" href="https://nikolaskorakidis.github.io/gruppetto/" target="_blank" rel="noopener"><img src="media/app-gruppetto.jpg" alt="Gruppetto: ride planner for cycling clubs"></a>
+        <a class="app" style="--c:#f06e50" href="https://github.com/NikolasKorakidis/dualearning-web" target="_blank" rel="noopener"><img src="media/app-dualearning.jpg" alt="Dualearning: learn Greek and Dutch together"></a>
+      </div>
+      <div class="tools">
+        <a class="tool" href="https://github.com/NikolasKorakidis/HorecApp-Restaurant-Manager-FrontEnd" target="_blank" rel="noopener"><b>HorecApp</b><span>Open-source PoS for bars and restaurants</span></a>
+        <a class="tool" href="https://github.com/NikolasKorakidis/cro-scanner" target="_blank" rel="noopener"><b>CRO Scanner</b><span>Conversion audits from PageSpeed + GPT</span></a>
+        <a class="tool" href="https://github.com/NikolasKorakidis/abtestreport" target="_blank" rel="noopener"><b>A/B Test Reports</b><span>Plan, track and analyze experiments</span></a>
+        <a class="tool" href="https://github.com/NikolasKorakidis/Website-Audit-2.0" target="_blank" rel="noopener"><b>Website Audit 2.0</b><span>AI-powered site audits</span></a>
+      </div>
+    </section>
+
+    <section id="channel">
+      <div class="head" style="--c:#ff5a5f"><div><small>04 / On camera</small><h2>The channel</h2></div><p>Flight sim, VR and FPV, filmed in OBS and cut in DaVinci Resolve.</p></div>
+    </section>
+  </div>
+  <div class="ticker" aria-hidden="true"><div><span>MSFS 2024</span><span>PSVR2</span><span>DJI AVATA 2</span><span>FPV</span><span>GAMING</span><span>MSFS 2024</span><span>PSVR2</span><span>DJI AVATA 2</span><span>FPV</span><span>GAMING</span></div></div>
+
+  <section id="contact" class="end wrap">
+    <h2>I build<br><span>worlds.</span></h2>
+    <p>Open to freelance web &amp; CRO work, game dev collabs, playtesters and sim/VR/FPV brand partnerships.</p>
+    <p class="mail">korakidisn@gmail.com</p>
+    <div class="row">
+      <a class="cta" href="https://www.linkedin.com/in/nikolaskorakidis" target="_blank" rel="noopener">LinkedIn ↗</a>
+      <a class="cta ghost" href="https://github.com/NikolasKorakidis" target="_blank" rel="noopener">GitHub ↗</a>
+      <a class="cta ghost" href="https://nikolaskorakidis.com" target="_blank" rel="noopener">Website ↗</a>
+    </div>
+  </section>
+  <footer>Greece → the Netherlands · 2026</footer>
+</main>
+
+<script>
+// Cursor spotlight
+addEventListener('pointermove', (e) => { document.documentElement.style.setProperty('--mx', e.clientX + 'px'); document.documentElement.style.setProperty('--my', e.clientY + 'px'); });
+
+// 3D tilt + glare on game cards (mouse only; touch keeps them flat)
+const still = matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('.card').forEach((c) => {
+  c.addEventListener('pointermove', (e) => {
+    if (e.pointerType !== 'mouse' || still) return;
+    const r = c.getBoundingClientRect(), x = (e.clientX - r.left) / r.width, y = (e.clientY - r.top) / r.height;
+    c.style.transform = `rotateY(${(x - .5) * 14}deg) rotateX(${(.5 - y) * 12}deg) translateZ(10px)`;
+    c.style.setProperty('--gx', x * 100 + '%'); c.style.setProperty('--gy', y * 100 + '%');
+  });
+  c.addEventListener('pointerleave', () => { c.style.transform = ''; });
+});
+
+// Showreel chapter controls (the reel posts back which scene is on screen)
+const reel = document.getElementById('reel').contentWindow, btns = document.querySelectorAll('#chapters [data-k]');
+btns.forEach((b) => b.addEventListener('click', () => reel.postMessage({ jump: b.dataset.k }, '*')));
+document.getElementById('pp').addEventListener('click', () => reel.postMessage({ toggle: true }, '*'));
+addEventListener('message', (e) => {
+  if (e.data?.scene) btns.forEach((b) => b.setAttribute('aria-current', String(b.dataset.k === e.data.scene || (e.data.scene === 'end' && b.dataset.k === 'intro'))));
+  if (typeof e.data?.paused === 'boolean') document.getElementById('pp').textContent = e.data.paused ? '▶ Play' : '❚❚ Pause';
+});
+</script>
